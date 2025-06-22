@@ -36,7 +36,8 @@ With trial-and-error interactions in online environments, VLA models can be furt
 | [RLVLA](https://arxiv.org/abs/2505.19789) | What Can RL Bring to VLA Generalization? An Empirical Study | Arxiv | 26/5/2025 | [Github](https://github.com/gen-robot/RL4VLA) |  <details><summary>Details</summary>PPO consistently outperforms GRPO and DPO; Shared actor-critic backbone; VLA warm-up</details> |
 | [RFTF](https://arxiv.org/abs/2505.19767) | RFTF: Reinforcement Fine-tuning for Embodied Agents with Temporal Feedback | Arxiv | 26/5/2025 |  |  <details><summary>Details</summary>For the sparse reward problem, RFTF leverages **a value model trained using temporal information** to generate dense rewards</details> |
 | SimpleVLA-RL |  | Github | 5/2025 | [Github](https://github.com/PRIME-RL/SimpleVLA-RL) |  |
-| [TGRPO](https://arxiv.org/abs/2506.08440) | TGRPO: Fine-tuning Vision-Language-Action Model via Trajectory-wise Group Relative Policy Optimization | Arxiv | 10/6/2025 | [Github](https://github.com/hahans/TGRPO) | From **GRPO in LLM** to **TGRPO in VLA**  |
+| [TGRPO](https://arxiv.org/abs/2506.08440) | TGRPO: Fine-tuning Vision-Language-Action Model via Trajectory-wise Group Relative Policy Optimization | Arxiv | 10/6/2025 | [Github](https://github.com/hahans/TGRPO) | <details><summary>Details</summary>From **GRPO in LLM** to **TGRPO in VLA**</details> |
+| [OctoNav](https://arxiv.org/abs/2506.09839) | OctoNav: Towards Generalist Embodied Navigation | Arxiv | 11/6/2025 | [Project](https://buaa-colalab.github.io/OctoNav/) | <details><summary>Details</summary>For Navigation tasks, it proposes a VLA+RL Hybrid Training Paradigm, including SFT, Nav-GRPO, Online RL stages. The VLA model also obtains thinking-before-action ability.</details> |
 
 
 ## **in Real-World**
