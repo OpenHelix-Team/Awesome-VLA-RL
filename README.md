@@ -19,6 +19,7 @@ The Offline RL pre-trained VLA models leverage both human demonstrations and aut
 | [GeRM](https://arxiv.org/abs/2403.13358) | GeRM: A Generalist Robotic Model with Mixture-of-experts for Quadruped Robot | IROS2024 | 20/3/2024 | [Github](https://github.com/Songwxuan/GeRM) | <details><summary>Details</summary>Mixtureof-Experts structure; Quadruped robot learning</details> |
 | [ReinboT](https://arxiv.org/abs/2505.07395) | ReinboT: Amplifying Robot Visual-Language Manipulation with Reinforcement Learning | ICML2025 | 12/5/2025 |  | <details><summary>Details</summary>Max-Return Sequence Modeling as Reinformer; Reward Densification with heuristic methods</details> |
 | [MoRE](https://arxiv.org/abs/2503.08007) | MoRE: Unlocking Scalability in Reinforcement Learning for Quadruped Vision-Language-Action Models | ICRA2025 | 11/3/2025 |  | <details><summary>Details</summary>Integrates multiple low-rank adaptation modules as distinct experts within a dense multi-modal large language model (MLLM), forming a sparse-activated mixture-of-experts model</details> |
+| [CO-RFT](https://arxiv.org/pdf/2508.02219) | CO-RFT: Efficient Fine-Tuning of Vision-Language-Action Models through Chunked Offline Reinforcement Learning | Arxiv | 4/8/2025 |  | <details><summary>Details</summary>Chunk-level offline RL finetuning. It proposed Chunked RL via n-step TD learning</details> |
 
 
 # **Online RL**
@@ -38,6 +39,7 @@ With trial-and-error interactions in online environments, VLA models can be furt
 | SimpleVLA-RL |  | Github | 5/2025 | [Github](https://github.com/PRIME-RL/SimpleVLA-RL) |  |
 | [TGRPO](https://arxiv.org/abs/2506.08440) | TGRPO: Fine-tuning Vision-Language-Action Model via Trajectory-wise Group Relative Policy Optimization | Arxiv | 10/6/2025 | [Github](https://github.com/hahans/TGRPO) | <details><summary>Details</summary>From **GRPO in LLM** to **TGRPO in VLA**</details> |
 | [OctoNav](https://arxiv.org/abs/2506.09839) | OctoNav: Towards Generalist Embodied Navigation | Arxiv | 11/6/2025 | [Project](https://buaa-colalab.github.io/OctoNav/) | <details><summary>Details</summary>For Navigation tasks, it proposes a VLA+RL Hybrid Training Paradigm, including SFT, Nav-GRPO, Online RL stages. The VLA model also obtains thinking-before-action ability.</details> |
+| [RLRC](https://arxiv.org/pdf/2506.17639) | RLRC: Reinforcement Learning-based Recovery for Compressed Vision-Language-Action Models | Arxiv | 21/6/2025 | [Project](https://rlrc-vla.github.io/) | <details><summary>Details</summary>A RL-based VLA compression Paradigm. Through a carefully designed three-stage pipeline, structured pruning, performance recovery based on SFT and RL, and 4bit quantization, they significantly reduce model size and boost inference speed while preserving, and in some cases surpassing, the original model’s ability to execute robotic tasks</details> |
 
 
 ## **in Real-World**
@@ -48,7 +50,6 @@ With trial-and-error interactions in online environments, VLA models can be furt
 | [PA-RL](https://arxiv.org/abs/2412.06685) | Policy Agnostic RL: Offline RL and Online RL Fine-Tuning of Any Class and Backbone | Arxiv | 9/12/2024 | [Project](https://policyagnosticrl.github.io/) | <details><summary>Details</summary>a single method that fine-tunes multiple policy classes, with varying architectures and sizes. It enables sample-efficient improvement of diffusion and transformer-based autoregressive policies. PA-RL sets a new state of the art for offline to online RL, and **it makes it possible, for the first time, to improve OpenVLA** </details> |
 | [iRe-VLA](https://arxiv.org/abs/2501.16664) | Improving Vision-Language-Action Model with Online Reinforcement Learning | RAL2025 | 28/1/2025 |  | <details><summary>Details</summary>Adopt SFT & RL two-stage iterative optimization to **Stabilizing Training Process** and **Managing the Model Training Burden**.</details> |
 | [ConRFT](https://arxiv.org/abs/2502.05450) | ConRFT: A Reinforced Fine-tuning Method for VLA Models via Consistency Policy | RSS2025 | 14/4/2025 | [Github](https://github.com/cccedric/conrft) | <details><summary>Details</summary>Offline fine-tuning(Cal-QL+PA-RL) and online fine-tuning(CPQL+HIL-SERL+PA-RL) </details> |
-| DYNA-1 | Dynamism v1 (DYNA-1) Model: A Breakthrough in Performance and Production-Ready Embodied AI |  | 5/2025 | [Project](https://www.dyna.co/research) | |
 
 # Test-Time RL
 Leverage a value function pre-trained via offline RL.
