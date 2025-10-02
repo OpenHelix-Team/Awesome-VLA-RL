@@ -2,7 +2,7 @@
 
 With significant advances in **Vision-Language-Action (VLA)🍔** models based on large-scale imitation learning, integrating VLA with **Reinforcement Learning (RL)🥤** has emerged as a promising paradigm. This paradigm leverages the benefits of trial-and-error interactions with environments or pre-collected sub-optimal data.
 
-This repository summarizes recent advances in the **VLA🍔 + RL🥤** paradigm and provides a classification of relevant works (offline RL training(without env.), online RL training(with env.), test-time RL(during deployment), and RL alignment).
+This repository summarizes recent advances in the **VLA🍔 + RL🥤** paradigm and provides a classification of relevant works (offline RL training(without env.), online RL training(with env.), Model-Based RL (with world model as env.) test-time RL(during deployment), and RL alignment).
 
 **Contributions are welcome! Please feel free to submit an issue or reach out via email to add papers!**
 
@@ -36,7 +36,7 @@ With trial-and-error interactions in online environments, VLA models can be furt
 | [VLA-RL](https://arxiv.org/abs/2505.18719) | VLA-RL: Towards Masterful and General Robotic Manipulation with Scalable Reinforcement Learning | Arxiv | 24/5/2025 | [Github](https://github.com/GuanxingLu/vlarl) | <details><summary>Details</summary>Robotic process reward model and the VLA-RL System with (1) Curriculum Selection Strategy (2) Critic Warmup (3) GPU-balanced Vectorized Environments (4) PPO infrastructure</details> |
 | [RLVLA](https://arxiv.org/abs/2505.19789) | What Can RL Bring to VLA Generalization? An Empirical Study | Arxiv | 26/5/2025 | [Github](https://github.com/gen-robot/RL4VLA) |  <details><summary>Details</summary>PPO consistently outperforms GRPO and DPO; Shared actor-critic backbone; VLA warm-up</details> |
 | [RFTF](https://arxiv.org/abs/2505.19767) | RFTF: Reinforcement Fine-tuning for Embodied Agents with Temporal Feedback | Arxiv | 26/5/2025 |  |  <details><summary>Details</summary>For the sparse reward problem, RFTF leverages **a value model trained using temporal information** to generate dense rewards</details> |
-| SimpleVLA-RL |  | Github | 5/2025 | [Github](https://github.com/PRIME-RL/SimpleVLA-RL) |  |
+| [SimpleVLA-RL](https://arxiv.org/pdf/2509.09674) | SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning | Arxiv | 12/9/2025 | [Github](https://github.com/PRIME-RL/SimpleVLA-RL) |  |
 | [TGRPO](https://arxiv.org/abs/2506.08440) | TGRPO: Fine-tuning Vision-Language-Action Model via Trajectory-wise Group Relative Policy Optimization | Arxiv | 10/6/2025 | [Github](https://github.com/hahans/TGRPO) | <details><summary>Details</summary>From **GRPO in LLM** to **TGRPO in VLA**</details> |
 | [OctoNav](https://arxiv.org/abs/2506.09839) | OctoNav: Towards Generalist Embodied Navigation | Arxiv | 11/6/2025 | [Project](https://buaa-colalab.github.io/OctoNav/) | <details><summary>Details</summary>For Navigation tasks, it proposes a VLA+RL Hybrid Training Paradigm, including SFT, Nav-GRPO, Online RL stages. The VLA model also obtains thinking-before-action ability.</details> |
 | [RLRC](https://arxiv.org/pdf/2506.17639) | RLRC: Reinforcement Learning-based Recovery for Compressed Vision-Language-Action Models | Arxiv | 21/6/2025 | [Project](https://rlrc-vla.github.io/) | <details><summary>Details</summary>A RL-based VLA compression Paradigm. Through a carefully designed three-stage pipeline, structured pruning, performance recovery based on SFT and RL, and 4bit quantization, they significantly reduce model size and boost inference speed while preserving, and in some cases surpassing, the original model’s ability to execute robotic tasks</details> |
@@ -52,6 +52,12 @@ With trial-and-error interactions in online environments, VLA models can be furt
 | [iRe-VLA](https://arxiv.org/abs/2501.16664) | Improving Vision-Language-Action Model with Online Reinforcement Learning | RAL2025 | 28/1/2025 |  | <details><summary>Details</summary>Adopt SFT & RL two-stage iterative optimization to **Stabilizing Training Process** and **Managing the Model Training Burden**.</details> |
 | [ConRFT](https://arxiv.org/abs/2502.05450) | ConRFT: A Reinforced Fine-tuning Method for VLA Models via Consistency Policy | RSS2025 | 14/4/2025 | [Github](https://github.com/cccedric/conrft) | <details><summary>Details</summary>Offline fine-tuning(Cal-QL+PA-RL) and online fine-tuning(CPQL+HIL-SERL+PA-RL) </details> |
 
+# World Model (Model-Based RL)
+| Method | Title | Venue | Date | Code/Project | Key feature/finding |
+| --- | --- | --- | --- | --- | --- |
+| [World-Env](https://arxiv.org/abs/2509.24948) | World-Env: Leveraging World Model as a Virtual Environment for VLA Post-Training | Arxiv | 30/9/2025 |  | <details><summary>Details</summary> A world model-based framework that enables low-cost, safe reinforcement learning post-training for VLA policies under extreme data scarcity, eliminating the need for real-world interaction. </details> |
+| [VLA-RFT](https://arxiv.org/pdf/2510.00406) | VLA-RFT: Vision-Language-Action Reinforcement Fine-tuning with Verified Rewards in World Simulators | Arxiv | 01/10/2025 | [Github](https://vla-rft.github.io/) | <details><summary>Details</summary> VLA-RFT, a reinforcement fine-tuning framework that leverages a data-driven world model as a controllable simulator. </details> |
+
 # Test-Time RL
 Leverage a value function pre-trained via offline RL.
 
@@ -60,6 +66,7 @@ Leverage a value function pre-trained via offline RL.
 | [Bellman-Guided Retrials](https://arxiv.org/abs/2406.15917) | To Err is Robotic: Rapid Value-Based Trial-and-Error during Deployment | Arxiv | 22/6/2024 | [Github](https://github.com/nakamotoo/V-GPS) | <details><summary>Details</summary>Pre-train a value function to estimate task completion, recover the robot and sample a new strategy if failed</details> |
 | [V-GPS](https://arxiv.org/abs/2410.13816) | Steering Your Generalists: Improving Robotic Foundation Models via Value Guidance | CoRL2024 | 17/10/2024 | [Project](https://sites.google.com/view/to-err-robotic/home) | <details><summary>Details</summary>Re-ranking multiple action proposals from a generalist policy using a value function at test-time</details> |
 | [Hume](https://arxiv.org/abs/2505.21432) | Hume: Introducing System-2 Thinking in Visual-Language-Action Model | Arxiv | 2/6/2025 | [Github](https://github.com/hume-vla/hume) | <details><summary>Details</summary> Pre-train a value function, perform best-of-N selection of candidate action chunks with state-action value estimation</details> |
+| [VLA-Reasoner](https://arxiv.org/abs/2505.21432) | VLA-Reasoner: Empowering Vision-Language-Action Models with Reasoning via Online Monte Carlo Tree Search | Arxiv | 26/9/2025 |  | <details><summary>Details</summary> plug-in framework named VLA-Reasoner that empowers VLAs with test-time MTCS to address their incremental deviations during deployment. </details> |
 
 
 
